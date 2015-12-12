@@ -6,6 +6,17 @@
     <body>
         <p>Hi there!</p>
         <p>It works!</p>
+       
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
         <p><a href="http://djangogirls.org">django girls</a></p>
     </body>
 </html>
